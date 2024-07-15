@@ -1,4 +1,5 @@
 ### GET request to example server
 GET http://localhost:8081/demo/test
 
-###
+### GET environment variable prod
+GET http://localhost:8888/demo-service/prod
