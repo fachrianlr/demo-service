@@ -20,3 +20,9 @@ spring:
       fail-fast: true
       request-connect-timeout: 5000
       request-read-timeout: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
