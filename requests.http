@@ -6,3 +6,6 @@ GET http://localhost:8888/demo-service/prod
 
 ### refresh variable if there's any changes
 POST http://localhost:8081/actuator/refresh
+
+### GET all users data
+GET http://localhost:8081/user/

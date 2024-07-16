@@ -20,6 +20,21 @@ spring:
       fail-fast: true
       request-connect-timeout: 5000
       request-read-timeout: 5000
+  datasource:
+    url: jdbc:postgresql://localhost:5432/store
+    username: dev
+    password: adminroot
+    driver-class-name: org.postgresql.Driver
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+
+flyway:
+  enabled: true
+  baseline-on-migrate: true
+
+logbook:
+  format.style: json
 
 management:
   endpoints:
