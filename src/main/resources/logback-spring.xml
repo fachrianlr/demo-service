@@ -53,7 +53,7 @@
     <appender-ref ref="FILE"/>
   </Logger>
 
-  <logger name="com.rian.demoservice.dao.repo" additivity="false" level="debug">
+  <logger name="com.rian.demo.dao.repo" additivity="false" level="debug">
     <appender-ref ref="SQL_FILE"/>
   </logger>
 
