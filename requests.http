@@ -4,6 +4,9 @@ GET http://localhost:8081/demo/test
 ### GET environment variable prod
 GET http://localhost:8888/demo-service/prod
 
+### GET environment variable dev
+GET http://localhost:8888/demo-service/dev
+
 ### refresh variable if there's any changes
 POST http://localhost:8081/actuator/refresh
 
