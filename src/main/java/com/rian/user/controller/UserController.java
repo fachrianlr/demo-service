@@ -1,6 +1,7 @@
 package com.rian.user.controller;
 
 
+import com.rian.common.dto.template.GenericResponse;
 import com.rian.user.model.User;
 import com.rian.user.service.UserService;
 import java.util.List;
@@ -19,7 +20,7 @@ public class UserController {
   }
 
   @GetMapping("/")
-  public List<User> getAllUsers() {
+  public GenericResponse<List<User>> getAllUsers() {
     return userService.getAllUsers();
   }
 }
