@@ -1,4 +1,4 @@
-package com.rian.common.dto.template;
+package com.rian.common.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

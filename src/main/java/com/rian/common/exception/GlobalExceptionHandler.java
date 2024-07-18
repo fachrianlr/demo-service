@@ -1,6 +1,6 @@
 package com.rian.common.exception;
 
-import com.rian.common.dto.template.GenericResponse;
+import com.rian.common.dto.response.GenericResponse;
 import com.rian.common.exception.exeptionlist.ClientException;
 import com.rian.common.exception.exeptionlist.NotFoundException;
 import com.rian.common.exception.exeptionlist.ServerException;
