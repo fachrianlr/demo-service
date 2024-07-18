@@ -14,12 +14,9 @@
 
   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>${LOG_ROOT}/${FILE_NAME}.log</file>
-    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
       <fileNamePattern>${LOG_ROOT}/${FOLDER_ARCHIVE}/log-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-      <timeBasedFileNamingAndTriggeringPolicy
-        class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-        <maxFileSize>50MB</maxFileSize>
-      </timeBasedFileNamingAndTriggeringPolicy>
+      <maxFileSize>50MB</maxFileSize>
       <maxHistory>365</maxHistory>
     </rollingPolicy>
     <encoder>
@@ -29,13 +26,9 @@
 
   <appender name="SQL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>${LOG_ROOT}/${SQL_FILE_NAME}.log</file>
-    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
       <fileNamePattern>${LOG_ROOT}/${FOLDER_ARCHIVE}/sql-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-      <maxHistory>365</maxHistory>
-      <timeBasedFileNamingAndTriggeringPolicy
-        class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-        <maxFileSize>50MB</maxFileSize>
-      </timeBasedFileNamingAndTriggeringPolicy>
+      <maxFileSize>50MB</maxFileSize>
       <maxHistory>365</maxHistory>
     </rollingPolicy>
     <encoder>
