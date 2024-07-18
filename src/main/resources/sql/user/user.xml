@@ -8,4 +8,16 @@
     SELECT *
     FROM users
   </select>
+
+  <select id="findUserById" parameterType="int" resultType="com.rian.user.model.User">
+    SELECT *
+    FROM users
+    WHERE id = #{userId}
+  </select>
+
+  <select id="findUserByUserNameAndEmail" parameterType="map" resultType="com.rian.user.model.User">
+    SELECT *
+    FROM users
+    WHERE username = #{userName} AND email = #{email}
+  </select>
 </mapper>

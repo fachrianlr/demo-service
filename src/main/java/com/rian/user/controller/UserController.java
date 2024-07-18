@@ -2,12 +2,11 @@ package com.rian.user.controller;
 
 
 import com.rian.common.dto.template.GenericResponse;
-import com.rian.common.exception.exeptionlist.ClientException;
-import com.rian.common.exception.exeptionlist.NotFoundException;
 import com.rian.user.model.User;
 import com.rian.user.service.UserService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,8 +25,13 @@ public class UserController {
     return userService.getAllUsers();
   }
 
-  @GetMapping("/{userid}")
-  public GenericResponse<List<User>> getError(String userid) {
-    throw new NotFoundException("Not Found");
+  @GetMapping("/{userId}")
+  public GenericResponse<User> getUserById(@PathVariable Integer userId) {
+    return userService.findUserById(userId);
+  }
+
+  @GetMapping("/{userName}/{email}")
+  public GenericResponse<User> getUserById(@PathVariable String userName, @PathVariable String email) {
+    return userService.findByUserNameAndEmail(userName, email);
   }
 }
