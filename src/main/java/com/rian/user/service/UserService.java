@@ -1,7 +1,7 @@
 package com.rian.user.service;
 
-import com.rian.user.dao.model.User;
-import com.rian.user.dao.repo.UserRepo;
+import com.rian.user.model.User;
+import com.rian.user.repository.UserRepo;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

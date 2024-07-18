@@ -1,4 +1,4 @@
-package com.rian.user.dao.model;
+package com.rian.user.model;
 
 import lombok.Data;
 

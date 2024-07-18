@@ -1,7 +1,7 @@
 package com.rian.user.controller;
 
 
-import com.rian.user.dao.model.User;
+import com.rian.user.model.User;
 import com.rian.user.service.UserService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
