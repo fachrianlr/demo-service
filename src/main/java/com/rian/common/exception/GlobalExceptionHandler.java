@@ -62,4 +62,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         .build();
     return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
   }
+
+
+  public ResponseEntity<GenericResponse<Object>> notFoundExceptiona(NotFoundException ex) {
+    GenericResponse<Object> errorMessage = GenericResponse.builder()
+        .respCode(String.valueOf(HttpStatus.NOT_FOUND.value()))
+        .respDesc(HttpStatus.NOT_FOUND.getReasonPhrase())
+        .data(ex.getMessage())
+        .build();
+    return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
+  }
+
 }
