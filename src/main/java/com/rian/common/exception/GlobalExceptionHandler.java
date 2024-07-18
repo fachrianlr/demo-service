@@ -2,10 +2,10 @@ package com.rian.common.exception;
 
 import com.rian.common.dto.template.GenericResponse;
 import com.rian.common.exception.exeptionlist.ClientException;
+import com.rian.common.exception.exeptionlist.NotFoundException;
 import com.rian.common.exception.exeptionlist.ServerException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Collections;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
-  @ExceptionHandler(Exception.class)
+  @ExceptionHandler({Exception.class})
   public ResponseEntity<GenericResponse<Object>> handleAllExceptions(Exception ex) {
 
     String errMessage = "Mohon Maaf Sistem Bermasalah";
@@ -47,10 +47,19 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
   public ResponseEntity<GenericResponse<Object>> clientException(ClientException ex) {
     GenericResponse<Object> errorMessage = GenericResponse.builder()
         .respCode(String.valueOf(HttpStatus.BAD_REQUEST.value()))
-        .respDesc(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase())
-        .data(Collections.singletonList(ex.getMessage()))
+        .respDesc(HttpStatus.BAD_REQUEST.getReasonPhrase())
+        .data(ex.getMessage())
         .build();
     return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
   }
 
+  @ExceptionHandler(NotFoundException.class)
+  public ResponseEntity<GenericResponse<Object>> notFoundException(NotFoundException ex) {
+    GenericResponse<Object> errorMessage = GenericResponse.builder()
+        .respCode(String.valueOf(HttpStatus.NOT_FOUND.value()))
+        .respDesc(HttpStatus.NOT_FOUND.getReasonPhrase())
+        .data(ex.getMessage())
+        .build();
+    return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
+  }
 }

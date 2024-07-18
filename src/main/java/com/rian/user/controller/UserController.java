@@ -2,6 +2,8 @@ package com.rian.user.controller;
 
 
 import com.rian.common.dto.template.GenericResponse;
+import com.rian.common.exception.exeptionlist.ClientException;
+import com.rian.common.exception.exeptionlist.NotFoundException;
 import com.rian.user.model.User;
 import com.rian.user.service.UserService;
 import java.util.List;
@@ -22,5 +24,10 @@ public class UserController {
   @GetMapping("/")
   public GenericResponse<List<User>> getAllUsers() {
     return userService.getAllUsers();
+  }
+
+  @GetMapping("/{userid}")
+  public GenericResponse<List<User>> getError(String userid) {
+    throw new NotFoundException("Not Found");
   }
 }
