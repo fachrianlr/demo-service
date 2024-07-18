@@ -50,4 +50,8 @@
     <appender-ref ref="SQL_FILE"/>
   </logger>
 
+  <logger name="com.rian.demo.repository" additivity="true" level="debug">
+    <appender-ref ref="SQL_FILE"/>
+  </logger>
+
 </configuration>
