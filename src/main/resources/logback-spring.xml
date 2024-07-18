@@ -17,7 +17,7 @@
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <fileNamePattern>${LOG_ROOT}/${FOLDER_ARCHIVE}/log-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <timeBasedFileNamingAndTriggeringPolicy
-        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
         <maxFileSize>50MB</maxFileSize>
       </timeBasedFileNamingAndTriggeringPolicy>
       <maxHistory>365</maxHistory>
@@ -33,7 +33,7 @@
       <fileNamePattern>${LOG_ROOT}/${FOLDER_ARCHIVE}/sql-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <maxHistory>365</maxHistory>
       <timeBasedFileNamingAndTriggeringPolicy
-        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
         <maxFileSize>50MB</maxFileSize>
       </timeBasedFileNamingAndTriggeringPolicy>
       <maxHistory>365</maxHistory>
