@@ -1,6 +1,9 @@
 package com.rian.demo.controller;
 
+import com.rian.common.dto.response.GenericResponse;
+import com.rian.demo.model.Demo;
 import com.rian.demo.service.DemoService;
+import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,8 +20,13 @@ public class DemoController {
   }
 
   @GetMapping("/test")
-  public String getTest() {
-    return demoService.getTestVariable1();
+  public GenericResponse<String> getTest() {
+    return demoService.getTestVariable();
+  }
+
+  @GetMapping("/")
+  public GenericResponse<List<Demo>> getDemo(){
+    return demoService.findAllDemo();
   }
 
 }
