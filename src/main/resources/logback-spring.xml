@@ -46,9 +46,8 @@
     <appender-ref ref="FILE"/>
   </Logger>
 
-  <logger name="com.rian.demo.dao.repo" additivity="false" level="debug">
+  <logger name="com.rian.user.repository" additivity="true" level="debug">
     <appender-ref ref="SQL_FILE"/>
   </logger>
-
 
 </configuration>
