@@ -1,4 +1,4 @@
-package com.rian.demo.common.exception.exeptionlist;
+package com.rian.common.exception.exeptionlist;
 
 public class ClientException extends RuntimeException {
 

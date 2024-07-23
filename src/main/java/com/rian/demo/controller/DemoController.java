@@ -1,6 +1,6 @@
 package com.rian.demo.controller;
 
-import com.rian.demo.common.dto.response.GenericResponse;
+import com.rian.common.dto.response.GenericResponse;
 import com.rian.demo.model.Demo;
 import com.rian.demo.service.DemoService;
 import java.util.List;

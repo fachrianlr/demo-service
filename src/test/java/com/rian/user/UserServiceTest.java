@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.rian.demo.common.dto.response.GenericResponse;
+import com.rian.common.dto.response.GenericResponse;
 import com.rian.user.model.User;
 import com.rian.user.repository.UserRepo;
 import com.rian.user.service.UserService;
