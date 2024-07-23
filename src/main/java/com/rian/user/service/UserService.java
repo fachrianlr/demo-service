@@ -1,6 +1,6 @@
 package com.rian.user.service;
 
-import com.rian.common.dto.response.GenericResponse;
+import com.rian.demo.common.dto.response.GenericResponse;
 import com.rian.user.model.User;
 import com.rian.user.repository.UserRepo;
 import java.util.HashMap;

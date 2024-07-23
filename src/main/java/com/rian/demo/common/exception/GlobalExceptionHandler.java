@@ -1,9 +1,9 @@
-package com.rian.common.exception;
+package com.rian.demo.common.exception;
 
-import com.rian.common.dto.response.GenericResponse;
-import com.rian.common.exception.exeptionlist.ClientException;
-import com.rian.common.exception.exeptionlist.NotFoundException;
-import com.rian.common.exception.exeptionlist.ServerException;
+import com.rian.demo.common.dto.response.GenericResponse;
+import com.rian.demo.common.exception.exeptionlist.ClientException;
+import com.rian.demo.common.exception.exeptionlist.NotFoundException;
+import com.rian.demo.common.exception.exeptionlist.ServerException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import lombok.extern.slf4j.Slf4j;

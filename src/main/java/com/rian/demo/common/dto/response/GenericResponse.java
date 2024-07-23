@@ -1,4 +1,4 @@
-package com.rian.common.dto.response;
+package com.rian.demo.common.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

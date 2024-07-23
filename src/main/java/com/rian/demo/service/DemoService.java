@@ -1,10 +1,10 @@
 package com.rian.demo.service;
 
 
-import com.rian.common.dto.response.GenericResponse;
+import com.rian.demo.common.dto.response.GenericResponse;
 import com.rian.demo.config.DemoProperties;
-import com.rian.demo.model.Demo;
 import com.rian.demo.repository.DemoRepo;
+import com.rian.demo.model.Demo;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

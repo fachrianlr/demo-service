@@ -1,7 +1,7 @@
 package com.rian.user.controller;
 
 
-import com.rian.common.dto.response.GenericResponse;
+import com.rian.demo.common.dto.response.GenericResponse;
 import com.rian.user.model.User;
 import com.rian.user.service.UserService;
 import java.util.List;
