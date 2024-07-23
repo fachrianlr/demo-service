@@ -1,5 +1,6 @@
 server:
   port: 8081
+  shutdown: graceful
   tomcat:
     connection-timeout: 2s
     keep-alive-timeout: 15s
@@ -20,11 +21,19 @@ spring:
       fail-fast: true
       request-connect-timeout: 5000
       request-read-timeout: 5000
+      retry:
+        max-attempts: 6
+        initial-interval: 1000 # 1s
+        max-interval: 2000 # 2s
+        multiplier: 1.1
   datasource:
     url: jdbc:postgresql://localhost:5432/store
     username: dev
     password: adminroot
     driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 2000 #ms
+      maximum-pool-size: 5
 
 mybatis:
   mapper-locations: classpath:sql/**/*.xml
