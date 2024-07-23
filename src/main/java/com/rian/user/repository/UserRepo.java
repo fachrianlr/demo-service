@@ -10,7 +10,7 @@ public interface UserRepo {
 
   List<User> findAllUsers();
 
-  User findUserById(Integer id);
+  User findUserById(Long id);
 
   User findUserByUserNameAndEmail(Map<String, Object> paramInput);
 }

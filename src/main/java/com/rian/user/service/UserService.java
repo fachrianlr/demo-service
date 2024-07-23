@@ -32,7 +32,7 @@ public class UserService {
         .build();
   }
 
-  public GenericResponse<User> findUserById(int id) {
+  public GenericResponse<User> getUserById(Long id) {
     User user = userRepo.findUserById(id);
     log.info("findUserById: {}", user);
     return GenericResponse.<User>builder()
@@ -42,7 +42,7 @@ public class UserService {
         .build();
   }
 
-  public GenericResponse<User> findByUserNameAndEmail(String userName, String email) {
+  public GenericResponse<User> getByUserNameAndEmail(String userName, String email) {
     Map<String, Object> params = new HashMap<>();
     params.put("userName", userName);
     params.put("email", email);

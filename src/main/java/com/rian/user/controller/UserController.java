@@ -26,12 +26,12 @@ public class UserController {
   }
 
   @GetMapping("/{userId}")
-  public GenericResponse<User> getUserById(@PathVariable Integer userId) {
-    return userService.findUserById(userId);
+  public GenericResponse<User> getUserById(@PathVariable Long userId) {
+    return userService.getUserById(userId);
   }
 
   @GetMapping("/{userName}/{email}")
   public GenericResponse<User> getUserById(@PathVariable String userName, @PathVariable String email) {
-    return userService.findByUserNameAndEmail(userName, email);
+    return userService.getByUserNameAndEmail(userName, email);
   }
 }

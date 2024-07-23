@@ -30,7 +30,7 @@ public class DemoService {
         .build();
   }
 
-  public GenericResponse<List<Demo>> findAllDemo() {
+  public GenericResponse<List<Demo>> getAllDemo() {
 
     List<Demo> demoList = demoRepo.findAllDemo();
     log.info("findByUserNameAndEmail: {}", demoList);
