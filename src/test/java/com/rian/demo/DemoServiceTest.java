@@ -41,6 +41,20 @@ public class DemoServiceTest {
   }
 
   @Test
+  void testGetTestVariable() {
+    //Arrange
+    when(demoProperties.getName()).thenReturn("demo name");
+    String expectedPropertiesName = "demo name";
+
+    //Act
+    GenericResponse<String> response = demoService.getTestVariable();
+
+    //Assert
+    assertEquals(expectedPropertiesName, response.getData());
+
+  }
+
+  @Test
   void testGetAllDemo() {
     // Arrange
     when(demoRepo.findAllDemo()).thenReturn(demoList);
