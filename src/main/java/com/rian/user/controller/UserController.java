@@ -31,7 +31,8 @@ public class UserController {
   }
 
   @GetMapping("/{userName}/{email}")
-  public GenericResponse<User> getUserById(@PathVariable String userName, @PathVariable String email) {
+  public GenericResponse<User> getUserById(@PathVariable String userName,
+      @PathVariable String email) {
     return userService.getByUserNameAndEmail(userName, email);
   }
 }

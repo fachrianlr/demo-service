@@ -25,7 +25,7 @@ public class DemoController {
   }
 
   @GetMapping("/")
-  public GenericResponse<List<Demo>> getDemo(){
+  public GenericResponse<List<Demo>> getDemo() {
     return demoService.getAllDemo();
   }
 
